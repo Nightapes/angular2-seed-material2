@@ -301,24 +301,6 @@ export class SeedConfig {
       .concat(this.APP_ASSETS.filter(filterDependency.bind(null, this.ENV)));
   }
 
-  materialComponents = [
-    'button',
-    'card',
-    'checkbox',
-    'grid-list',
-    'icon',
-    'input',
-    'list',
-    'progress-bar',
-    'progress-circle',
-    'radio',
-    'sidenav',
-    'slide-toggle',
-    'button-toggle',
-    'tabs',
-    'toolbar'
-  ];
-
   /**
    * The configuration of SystemJS for the `dev` environment.
    * @type {any}
