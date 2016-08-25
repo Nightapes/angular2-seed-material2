@@ -280,7 +280,7 @@ export class SeedConfig {
    * @type {InjectableDependency[]}
    */
   APP_ASSETS: InjectableDependency[] = [
-    { src: `${this.CSS_SRC}/main.${ this.getInjectableStyleExtension() }`, inject: true, vendor: false },
+    { src: `${this.CSS_SRC}/main.${this.getInjectableStyleExtension()}`, inject: true, vendor: false },
   ];
 
   /**
@@ -331,6 +331,10 @@ export class SeedConfig {
       rxjs: { defaultExtension: 'js' }
     }
   };
+
+
+
+
 
   /**
    * The configuration of SystemJS of the application.
@@ -385,6 +389,78 @@ export class SeedConfig {
       },
       '@angular/router': {
         main: 'index.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/card': {
+        main: 'card.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/button': {
+        main: 'button.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/checkbox': {
+        main: 'checkbox.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/grid-list': {
+        main: 'grid-list.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/icon': {
+        main: 'icon.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/input': {
+        main: 'input.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/list': {
+        main: 'list.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/menu': {
+        main: 'menu.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/progress-bar': {
+        main: 'progress-bar.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/progress-circle': {
+        main: 'progress-circle.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/radio': {
+        main: 'radio.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/sidenav': {
+        main: 'sidenav.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/slider': {
+        main: 'slider.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/slide-toggle': {
+        main: 'slide-toggle.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/button-toggle': {
+        main: 'button-toggle.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/tabs': {
+        main: 'tabs.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/toolbar': {
+        main: 'toolbar.js',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/tooltip': {
+        main: 'tooltip.js',
         defaultExtension: 'js'
       },
       'rxjs': {
@@ -485,7 +561,7 @@ export class SeedConfig {
    * @param {any} pluginKey The object key to look up in PLUGIN_CONFIGS.
    */
   getPluginConfig(pluginKey: string): any {
-    if (this.PLUGIN_CONFIGS[ pluginKey ]) {
+    if (this.PLUGIN_CONFIGS[pluginKey]) {
       return this.PLUGIN_CONFIGS[pluginKey];
     }
     return null;
